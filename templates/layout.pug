@@ -1,0 +1,17 @@
+doctype html
+html
+  //- For Pug, indentation is extremely important. Because there are no opening and closing tags, the indents are the only thing that determines the hierarchical structure (i.e. which elements are nested inside what)
+  head 
+    meta(charset="utf-8")
+    title #{title} | Test website
+    link(rel="stylesheet", href="/css/styles.css")
+    block scripts 
+      script(src="/js/common.js")
+  body
+    //- header#header-container is the shortcut for header(id="header-container")
+    include includes/header.pug
+    main#main-content 
+      //- specify a dynamic block named layout-content
+      block layout-content
+    footer#footer-content 
+      p &copy; Copyright HTTP5222, 2024.

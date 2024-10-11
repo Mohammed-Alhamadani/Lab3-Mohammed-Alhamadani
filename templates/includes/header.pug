@@ -1,0 +1,11 @@
+header#header-container
+  //- div.header-content is the shortcut for div(class="header-content")
+  div.header-content
+    h2#site-name 
+      a(href="/") Test website 
+
+    nav(aria-label="Main navigation")
+      ul
+        each link in menu
+          li
+            a(href=link.path) #{link.name}

@@ -1,0 +1,14 @@
+extends layout
+block layout-content
+    h1.page-title Update menu link
+    form(method="post", action="/admin/menu/update/:id/submit")
+        div
+            label(for="wgt") Weight:
+            input(type="number", id="wgt", name="weight", value=menu.weight)
+        div
+            label(for="href") URI:
+            input(type="text", id="href", name="path", placeholder="e.g. /myPage", value=menu.path)
+        div
+            label(for="link-name") Name:
+            input(type="text", id="link-name", name="name", placeholder="e.g. About", value=menu.name)
+            button(type="submit",class="edit") Update link
